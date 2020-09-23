@@ -4,6 +4,7 @@ require './lib/ingredient'
 require './lib/pantry'
 require './lib/recipe'
 require './lib/cook_book'
+require 'date'
 
 class CookBookTest < Minitest::Test
   def test_it_exists_and_has_readable_attributes
@@ -11,6 +12,7 @@ class CookBookTest < Minitest::Test
 
     assert_instance_of CookBook, cookbook
     assert_equal [], cookbook.recipes
+    assert_equal "04-22-2020", cookbook.date
   end
 
   def test_it_can_add_recipes
