@@ -42,6 +42,9 @@ class CookBookTest < Minitest::Test
     recipe2.add_ingredient(ingredient3, 4)
     recipe2.add_ingredient(ingredient4, 1)
 
+    cookbook.add_recipe(recipe1)
+    cookbook.add_recipe(recipe2)
+
     expected = [ingredient1, ingredient2, ingredient3, ingredient4]
 
     assert_equal expected, cookbook.ingredients
