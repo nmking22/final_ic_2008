@@ -5,9 +5,12 @@ require './lib/pantry'
 require './lib/recipe'
 require './lib/cook_book'
 require 'date'
+require 'mocha/minitest'
+require 'mocha/setup'
 
 class CookBookTest < Minitest::Test
   def test_it_exists_and_has_readable_attributes
+    Date.stubs(:today).returns(Date.new(2020,4,22))
     cookbook = CookBook.new
 
     assert_instance_of CookBook, cookbook
