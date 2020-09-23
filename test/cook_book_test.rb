@@ -78,7 +78,8 @@ class CookBookTest < Minitest::Test
     assert_equal recipe2, cookbook.highest_calorie_meal
   end
 
-  def test_it_can
+  def test_it_can_return_summary
+    skip
     cookbook = CookBook.new
     ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})
     ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 30})
