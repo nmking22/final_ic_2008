@@ -11,4 +11,11 @@ class Pantry
   def restock(ingredient, quantity)
     @stock[ingredient] += quantity
   end
+
+  def enough_ingredients_for?(recipe)
+    enough_array = recipe.ingredients_required.map do |ingredient, quantity|
+      stock[ingredient] >= quantity
+    end
+    enough_array.uniq.count == 1 && enough_array[0] == true
+  end
 end
