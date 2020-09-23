@@ -25,7 +25,6 @@ class CookBookTest < Minitest::Test
   end
 
   def test_it_can_return_ingredients
-    pantry = Pantry.new
     cookbook = CookBook.new
     ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})
     ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 30})
